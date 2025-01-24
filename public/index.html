@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH Video Player</title>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+    <video id="videoPlayer" controls style="width: 100%; max-width: 800px;"></video>
+    <script>
+        const player = dashjs.MediaPlayer().create();
+        player.initialize(document.querySelector("#videoPlayer"), "output.mpd", true);
+    </script>
+</body>
+</html>
